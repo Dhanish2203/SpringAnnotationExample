@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config/>
+
+	<bean id="emp" class="com.demo.bean.Employee">
+		<property name="empid" value="1001"></property>
+	</bean>
+
+	<!-- Bean for MailService implementation of MessageService -->
+	<bean id="mailService" class="com.demo.service.Mailservice">
+		<property name="empName" value="dhanish"></property>
+		<property name="mail" value="test@gmail.com"></property>
+	</bean>
+
+
+	<!-- Bean for SmsService implementation of MessageService -->
+	<!--<bean id= "smsService" class="com.demo.service.SmsService"> <property 
+		name="Message" value="Good Morning!"></property> 
+		<property name="mobile" value="1234512345"></property> 
+		</bean> -->
+</beans>
